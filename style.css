@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
     font-family: "Montserrat";
     src: url('fonts/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
@@ -28,7 +35,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -39,9 +47,15 @@ body {
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-height: 700px;
     height: calc(100vh - 60px);
 }
@@ -85,8 +99,12 @@ body {
 }
 
 .product-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 50px;
 }
 
@@ -100,7 +118,8 @@ body {
 .old-price {
     margin-left: 20px;
     color: var(--dark-grayish-blue);
-    text-decoration: line-through solid var(--dark-grayish-blue);
+    -webkit-text-decoration: line-through solid var(--dark-grayish-blue);
+            text-decoration: line-through solid var(--dark-grayish-blue);
 }
 
 .buy-product {
@@ -113,11 +132,19 @@ body {
     color: var(--white);
     font-family: "Montserrat";
     font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 15px;
     cursor: pointer;
+    -webkit-transition: background .3s ease-in-out;
+    -o-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
 }
 
@@ -158,6 +185,8 @@ body {
     }
 
     .main {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 600px;
         height: 400px;
@@ -166,11 +195,13 @@ body {
     .product-img {
         background: url('images/image-product-desktop.jpg') center center / cover no-repeat;
         width: 300px;
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
     }
 
     .product-details {
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
         width: 300px;
     }
 
