@@ -74,7 +74,6 @@ body {
 
 .product-details {
     background-color: var(--white);
-    height: 370px;
     padding: 20px;
 }
 
@@ -150,6 +149,10 @@ body {
 
 .buy-product:hover, .buy-product:active {
     background: var(--very-dark-cyan);
+}
+
+.buy-product:active {
+    transform: translateY(10%);
 }
 
 .buy-product::before {
